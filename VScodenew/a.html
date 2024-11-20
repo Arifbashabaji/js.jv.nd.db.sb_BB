@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            height:100vh;
+            box-sizing: border-box;
+            margin:0;
+        }
+        #div1{
+            position:absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            border: 1px solid #ddd;
+            width:400px;
+            height:200px;
+            border-radius: 5px;
+            overflow: hidden;
+            transition:box-shadow .2s ease;
+        }
+        #div1_circle{
+            position:absolute;
+            top:-26%;
+            right:-12%;
+            width: 100px;
+            background:conic-gradient(#fff 30deg,#0c2f79 180deg);
+            height:100px;
+            /* border: 4px solid #871f1f00; */
+            border-radius:100%;
+            transition:transform 0.4s ease-in-out;
+        }
+        #div1:hover{
+            box-shadow:5px 8px #ddd;
+            transition:box-shadow 0.3s ease;
+        }
+       #div1:hover #div1_circle {
+            transform: scale(10); 
+            /* transition: scale 0.9s ease; */
+            transition: transform 0.4s ease-in-out;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">   
+    <div id="div1_circle">
+    </div>
+    </div>
+</body>
+</html>
