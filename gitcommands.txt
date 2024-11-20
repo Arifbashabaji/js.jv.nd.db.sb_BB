@@ -1,0 +1,101 @@
+1. Configuration Commands
+
+        git config --global user.name "Your Name": Set the global username.
+        git config --global user.email "youremail@example.com": Set the global email.
+        git config --list: View current Git configuration.
+        git config --global core.editor <editor>: Set the default editor (e.g., vim, nano, etc.).
+
+2. Repository Initialization
+
+        git init: Initialize a new Git repository in the current directory.
+        git clone <repository-URL>: Clone a remote repository to your local machine.
+
+3. Basic Workflow
+
+        git add <file>: Stage a specific file.
+        git add .: Stage all changes in the current directory.
+        git commit -m "Commit message": Commit staged changes with a message.
+        git commit --amend: Amend the last commit (e.g., update the message).
+
+4. Viewing Changes
+
+        git status: Check the status of your working directory.
+        git diff: Show unstaged changes.
+        git diff --staged: Show changes staged for commit.
+        git log: View commit history.
+        git log --oneline: Compact one-line commit history.
+        git show <commit-hash>: Show details of a specific commit.
+
+5. Branch Management
+
+        git branch: List all branches.
+        git branch <branch-name>: Create a new branch.
+        git checkout <branch-name>: Switch to a branch.
+        git checkout -b <branch-name>: Create and switch to a new branch.
+        git branch -d <branch-name>: Delete a branch.
+        git merge <branch-name>: Merge a branch into the current branch.
+
+6. Remote Repositories
+
+        git remote add origin <remote-URL>: Link a local repository to a remote one.
+        git remote -v: View remote repository details.
+        git push: Push changes to the remote repository.
+        git push origin <branch>: Push a specific branch.
+        git pull: Fetch and merge changes from the remote repository.
+        git fetch: Fetch changes from the remote repository without merging.
+
+7. Undoing Changes
+
+        git restore <file>: Discard changes in a file (unstaged).
+        git restore --staged <file>: Unstage a file.
+        git reset --soft HEAD~1: Undo the last commit but keep changes staged.
+        git reset --mixed HEAD~1: Undo the last commit and unstage changes.
+        git reset --hard HEAD~1: Undo the last commit and discard changes.
+
+8. Stashing Changes
+
+        git stash: Save changes for later without committing.
+        git stash list: List stashed changes.
+        git stash apply: Reapply stashed changes.
+        git stash drop: Delete a specific stash.
+        git stash pop: Apply and delete the most recent stash.
+
+9. Tags
+
+        git tag: List all tags.
+        git tag <tag-name>: Create a new tag.
+        git push origin <tag-name>: Push a tag to the remote repository.
+        git tag -d <tag-name>: Delete a tag locally.
+        git push origin --delete <tag-name>: Delete a tag from the remote repository.
+
+10. Collaboration
+
+        git blame <file>: Show authorship of each line in a file.
+        git cherry-pick <commit-hash>: Apply a specific commit to the current branch.
+        git rebase <branch>: Reapply commits on top of another branch.
+        git revert <commit-hash>: Create a new commit that undoes a specific commit.
+
+11. Advanced Commands
+
+        git reflog: View the history of all HEAD changes.
+        git gc: Optimize the repository (garbage collection).
+        git bisect: Use binary search to find a specific commit causing an issue.
+        git archive: Create an archive of a specific commit or branch.
+        git bundle: Create a bundled repository file.
+
+12. Submodules
+
+        git submodule add <repository-URL>: Add a submodule.
+        git submodule update --init --recursive: Initialize and update submodules.
+        git submodule deinit <path>: Remove a submodule.
+        git submodule status: Check submodule status.
+
+13. Ignoring Files
+
+        touch .gitignore: Create a .gitignore file.
+        Add patterns to .gitignore to exclude specific files or directories.
+
+14. Authentication
+
+        git credential-cache: Cache credentials for a session.
+        git credential-store: Store credentials persistently.
